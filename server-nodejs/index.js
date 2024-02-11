@@ -47,9 +47,9 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.use(express.static(path.join(__dirname, "../client-react/build")));
+app.use(express.static(path.join(__dirname, "./build")));
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../client-react/build/index.html"));
+  res.sendFile(path.resolve(__dirname, "./build/index.html"));
 })
 // vvv On port 3001!
 app.listen(3001);
